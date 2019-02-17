@@ -1,0 +1,10 @@
+'''
+As this is the last exercise for procedural programming, this exercise is also a sort of final project, which implements all of the things discussed during the course. Also, even this if this exercise is marked as an exercise for the continuing notebook program, the changes made in the program will be rather excessive, so it may be a good idea to start from a clean plate.
+
+
+In this exercise the idea is to build a notebook which applies the Python data structure list as a note manipulation method when the program is executed, and saves the data in a bitwise mode with pickle. The program has the following features:
+A) It is possible to add notes, with similar timestamps as earlier. 
+B)It is possible to edit a note by selecting it from the list, and rewriting it with new data.
+C) It is possible to delete notes separately based on the selection and 
+D) Notebook loads an existing notebook file from the file "notebook.dat" if such a file exists.
+'''
