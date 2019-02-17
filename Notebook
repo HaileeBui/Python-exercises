@@ -8,3 +8,4 @@ B)It is possible to edit a note by selecting it from the list, and rewriting it 
 C) It is possible to delete notes separately based on the selection and 
 D) Notebook loads an existing notebook file from the file "notebook.dat" if such a file exists.
 '''
+# -*- coding: cp1252 -*-
