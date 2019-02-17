@@ -1,5 +1,8 @@
 '''
-In the third exercise we make one final adjustment to the class by adding initialization data and a docstring. First add a docstring "Player-class: stores data on team colors and points.". After this, add an initializing method __init__ to the class, and make it prompt the user for a new player color with the message"What color do I get?: ".
+In the third exercise we make one final adjustment to the class by adding initialization data and a docstring.
+First add a docstring "Player-class: stores data on team colors and points.".
+After this, add an initializing method __init__ to the class, and make it prompt the user for a new player
+color with the message"What color do I get?: ".
 
 '''
 
