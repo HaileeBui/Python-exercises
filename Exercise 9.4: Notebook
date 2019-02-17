@@ -9,3 +9,51 @@ C) It is possible to delete notes separately based on the selection and
 D) Notebook loads an existing notebook file from the file "notebook.dat" if such a file exists.
 '''
 # -*- coding: cp1252 -*-
+import time 
+import pickle 
+
+list=[]
+
+try:
+	readfile=open("notebook.dat","rb")
+	content=pickle.load(readfile)
+	readfile.close()
+except IOError:
+	print("No default notebook was found, created one.")
+	readfile=open("notebook.dat","wb")
+	pickle.dump(list,readfile)
+	readfile.close()
+
+while True:
+	print("(1) Read the notebook\n(2) Add note\n(3) Edit a note\n(4) Delete a note\n(5) Save and quit")
+
+	choice = int(input("Please select one: "))
+	
+	if choice == 1:
+		for i in list:
+			print(i)
+
+	elif choice == 2:
+		content=input("Write a new note: ")
+		list.append(content + ":::"+ time.strftime("%X %x") + "\n")
+	
+	elif choice == 3:
+		print("The list has ",str(len(list)), "notes.")
+		change=int(input("Which of them will be changed?: "))
+		print(list[change])
+		new=input("Give the new note: ")
+		list[change]= (new+ ":::"+ time.strftime("%X %x") + "\n")
+			
+	elif choice == 4:
+		try:
+			print("The list has ", str(len(list)), "notes.")
+			delete= int(input("Which of them will be deleted?: "))
+			print("Deleted note", list[delete])
+			list.pop(delete)
+		except IndexError:
+			print("Deleted note", list[delete -1])
+			list.pop(delete-1)
+		
+	else:
+		print("Notebook shutting down, thank you.")
+		break
